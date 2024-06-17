@@ -1,0 +1,176 @@
+@import "../../vars.css";
+
+.box {
+    width: 420px;
+    height: 420px;
+    display: grid;
+    place-content: center;
+    color: white;
+    text-shadow: 0 1px 0 #000;
+  
+    --border-angle: 0turn; /* For animation */
+    --main-bg: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%
+    );
+  
+    border: solid 5px transparent;
+    border-radius: 2em;
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+  
+    background: 
+      var(--main-bg) padding-box,
+      var(--gradient-border) border-box, 
+      var(--main-bg) border-box;
+  
+    background-position: center center;
+  
+    animation: bg-spin 3s linear infinite;
+  }
+  
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+  
+  .box:hover {
+    animation-play-state: paused;
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+  
+  
+.writingText {
+    font-size: 30px;
+    font-family: var(--font-roboto);
+    margin-bottom: 52px;
+    /* writing-mode: vertical-rl; */
+    animation: typing 2s steps(1, end);
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+  }
+
+.container{
+    position: relative;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin-top:40px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right:10%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    align-items: flex-start;
+    color:var(--color-text);
+    z-index: 1;
+}
+.title{
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 33px;
+    font-family: var(--font-roboto);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 120%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    gap: 30px;
+
+}
+.Description{
+    font-size: 30px;
+    font-family: var(--font-roboto);
+    margin-bottom: 52px;
+    background: linear-gradient(90deg, rgb(93, 58, 231) 0%, rgba(255,0,0,1) 50%, rgba(0,0,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bolder;
+  color: transparent;
+    
+}
+.contactBtn{
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
+}
+.contactBtn:hover{
+    color: var(--color-text);
+    background: linear-gradient(90deg, rgb(93, 58, 231) 0%, rgba(255,0,0,1) 50%, rgba(0,0,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bolder;
+  color: transparent;
+  box-shadow: 1px 1px 10px 1px rgba(254, 252, 252, 0.25);
+}
+.heroImg{
+    z-index: 1;
+    width: 400px;
+    height: 395px;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-radius: 3%;
+    overflow: hidden;
+    ;
+}
+@keyframes float{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translatey(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.topBlur{
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    min-width: 250px;
+    min-height: 350px;
+    top: 246px;
+    right: -25vw;
+    border-radius: 764px;
+    background: rgba(25, 55,109,0.7);
+    filter:blur(100px);
+    z-index: 0;
+}
+@media screen and (max-width: 830px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .content{
+        align-items: center;
+    }
+   
+    
+}
