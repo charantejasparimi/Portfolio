@@ -17,7 +17,7 @@ function App() {
     // Callback function executed after rendering
     const timeoutId = setTimeout(() => {
       setLoading(false);
-      console.log('Loading finisheds'); // Check if this logs
+      console.log('Loading finishe'); // Check if this logs
     }, 1000); // Set timeout to 0 to execute after rendering
 
     // Cleanup function
