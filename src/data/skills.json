@@ -40,10 +40,6 @@
     "imageSrc": "skills/psql.png"
   },
   {
-    "title": "Flask",
-    "imageSrc": "skills/flask.png"
-  },
-  {
     "title": "Docker",
     "imageSrc": "skills/docker.png"
   },
@@ -58,10 +54,6 @@
   {
     "title": "PyTorch",
     "imageSrc": "skills/pytorch.png"
-  },
-  {
-    "title": "TensorFlow",
-    "imageSrc": "skills/tensorflow.png"
   },
   {
     "title": "Express.js",
@@ -79,5 +71,4 @@
     "title": "Matplotlib",
     "imageSrc": "skills/matplotlib.png"
   }
-
 ]

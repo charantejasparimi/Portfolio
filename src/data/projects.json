@@ -1,31 +1,47 @@
 [
   {
+    "title": "Hostel Complaint System System",
+    "duration": "Jun 2023 - Oct 2023",
+    "description": "Developed a web app for managing hostel complaints. Improved communication between students and admins. ",
+    "skills": ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Bootstrap"],
+    "imageSrc": "projects/hostel.png",
+    "demo": "https://hostel-managment.netlify.app/",
+    "source": "https://github.com/charantejasparimi/Hostel-Complaints-Managment"
+  },
+  {
     "title": "Sports Scheduling Web Application",
     "duration": "Jan 2024 - Feb 2024",
     "description": "Developed a full-stack sports scheduling app for admins and players. Enabled game management and user authentication.",
-    "skills": ["Node.js", "Express.js", "Firebase", "PostgreSQL", "HTML/CSS", "JavaScript"],
+    "skills": [
+      "Node.js",
+      "Express.js",
+      "Firebase",
+      "PostgreSQL",
+      "HTML/CSS",
+      "JavaScript"
+    ],
     "imageSrc": "projects/sports.png",
     "demo": "https://youtu.be/yKQztm-Yu6I",
     "source": "https://github.com/charantejasparimi/sports-scheduler"
   },
+
   {
     "title": "Plant Disease Detection using CNNs",
     "duration": "Aug 2023 - Dec 2023",
     "description": "Directed a plant disease detection project using CNNs (VGG19, AlexNet, ResNet18). Launched a real-time detection web app. Published research showing ResNet's superior accuracy due to skipped connections.",
-    "skills": ["Python", "TensorFlow", "Flask", "Firebase", "HTML/CSS", "JavaScript"],
+    "skills": [
+      "Python",
+      "Pytorch",
+      "FastApi",
+      "Firebase",
+      "HTML/CSS",
+      "JavaScript"
+    ],
     "imageSrc": "projects/plant.png",
     "demo": "https://www.example.com/demo/plant_disease_detection",
     "source": "https://github.com/charantejasparimi/Plant_Disease_Detection"
   },
-  {
-    "title": "Hostel Complaint System System",
-    "duration": "Jun 2023 - Oct 2023",
-    "description": "Developed a web app for managing hostel complaints. Improved communication between students and admins. ",
-    "skills": ["Node.js", "Express.js", "Firebase", "HTML/CSS", "JavaScript"],
-    "imageSrc": "projects/hostel.png",
-    "demo": "https://youtu.be/Yj9JO9bVONA",
-    "source": "https://github.com/charantejasparimi/WEB_APPLICATION_USING_NODEJS_AND_FIREBASE"
-  },
+
   {
     "title": "E-commerce Platform Platform",
     "duration": "Jun 2023 - Oct 2023",
@@ -34,14 +50,5 @@
     "imageSrc": "projects/ecommerce.png",
     "demo": "https://youtu.be/XcFyzjXvoQk",
     "source": "https://github.com/charantejasparimi/CampusCart_-3DBrains-"
-  },
-  {
-    "title": "Digital Rupee Sentiment Analysis",
-    "duration": "Dec 2022",
-    "description": "Implemented ML algorithms for Digital Rupee sentiment analysis. Analyzed 2,500+ YouTube comments and Twitter posts. Found positive sentiment outweighed negatives. Filtered out irrelevant data for accurate NLP classification.",
-    "skills": ["Machine Learning", "Python", "NLP"],
-    "imageSrc": "projects/rupee.jpeg",
-    "demo": "https://www.example.com/demo/digital_rupee_sentiment",
-    "source": "https://github.com/charantejasparimi/sentithon"
   }
 ]
