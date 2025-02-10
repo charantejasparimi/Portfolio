@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./About.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -19,7 +17,9 @@ const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Frontend Developer</h3>
               <p>
-                As a frontend developer, I specialize in crafting responsive and dynamic user interfaces using the latest technologies like React and Vue.js. My focus is on delivering seamless user experiences.
+                As a frontend developer, I specialize in crafting responsive and
+                dynamic user interfaces using the latest technologies like
+                Reactjs. My focus is on delivering seamless user experiences.
               </p>
             </div>
           </li>
@@ -28,16 +28,24 @@ const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Backend Developer</h3>
               <p>
-                With expertise in backend development, I build robust and scalable server-side applications using Node.js, Express, and Django. My work ensures efficient data management and high performance.
+                With expertise in backend development, I build robust and
+                scalable server-side applications using Node.js, Express, and
+                Django. My work ensures efficient data management and high
+                performance.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.png")} alt="Database icon" />
+            <img
+              src={getImageUrl("about/serverIcon.png")}
+              alt="Database icon"
+            />
             <div className={styles.aboutItemText}>
               <h3>Database Management</h3>
               <p>
-                I have extensive experience with database systems like MongoDB, MySQL, and PostgreSQL. I design efficient database schemas and optimize queries to ensure data integrity and fast retrieval.
+                I have extensive experience with database systems like MongoDB,
+                MySQL, and PostgreSQL. I design efficient database schemas and
+                optimize queries to ensure data integrity and fast retrieval.
               </p>
             </div>
           </li>
