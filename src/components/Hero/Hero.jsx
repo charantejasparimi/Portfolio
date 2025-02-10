@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
@@ -6,7 +6,7 @@ const Hero = () => {
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
-    const text = "Chharan Tejas";
+    const text = "Charan Tejas";
     const interval = 100; // Interval between each character animation in milliseconds
 
     let currentIndex = 0;
@@ -38,11 +38,11 @@ const Hero = () => {
             Contact Me
           </a>
           <a
-            href="https://drive.google.com/file/d/1zj51b9K-LxPcsltQWJIsA5bhfqg8tSD7/view?usp=sharing"
+            href="https://drive.google.com/file/d/1k0t6x4XlqNFq0IZYTQzcAs0HeKUbYbqH/view?usp=sharing"
             className={styles.contactBtn}
           >
             CV
-            <span class="material-symbols-outlined">download</span>
+            <span className="material-symbols-outlined">download</span>
           </a>
         </div>
       </div>
