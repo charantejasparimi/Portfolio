@@ -108,7 +108,7 @@ export const Contact = () => {
           Let&rsquo;s talk.
         </h2>
         <p className="lead on-dark-2">
-          Open to full stack and AI engineer roles in India, with a 15-day notice period.
+          Open to full stack and AI engineer roles in India.
         </p>
         <div className="contact-actions">
           <a className="button button-night" href={`mailto:${links.email}`}>

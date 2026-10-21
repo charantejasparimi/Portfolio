@@ -19,8 +19,8 @@ export const embedUpfound = true;
 
 export const hero = {
   name: "Charan Tejas Parimi",
-  lead: "Full stack AI engineer. I build web apps and the AI features inside them.",
-  facts: ["Chennai, India", "Around 2 years of experience", "15-day notice period"],
+  lead: "Full stack AI engineer. I turn AI ideas into fast, reliable products people actually use.",
+  facts: ["Chennai, India", "Around 2 years of experience"],
 };
 
 // Floating tool chips around the hero photo.
