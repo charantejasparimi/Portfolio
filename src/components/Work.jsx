@@ -2,7 +2,8 @@ import Icon from "./Icon";
 import ParticleField from "./ParticleField";
 import UpfoundMock from "./mocks/UpfoundMock";
 import PlantMock from "./mocks/PlantMock";
-import { projects, links } from "../data/content";
+import UpfoundFrame from "./mocks/UpfoundFrame";
+import { projects, links, embedUpfound } from "../data/content";
 
 const Work = () => {
   const up = projects.upfound;
@@ -29,19 +30,25 @@ const Work = () => {
                 {up.title}
               </h3>
               <p className="tile-line">{up.line}</p>
-              <ol className="numbered">
-                {up.points.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ol>
+              {embedUpfound ? (
+                <ul className="ticks ticks-dark">
+                  {up.points.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ul>
+              ) : (
+                <ol className="numbered">
+                  {up.points.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ol>
+              )}
               <a className="textlink on-dark" href={links.upfound}>
                 {up.linkLabel}
                 <Icon name="external" size={16} />
               </a>
             </div>
-            <div className="tile-visual">
-              <UpfoundMock />
-            </div>
+            <div className="tile-visual">{embedUpfound ? <UpfoundFrame /> : <UpfoundMock />}</div>
           </article>
         </div>
       </div>

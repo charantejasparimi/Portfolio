@@ -12,6 +12,11 @@ export const links = {
   resume: null,
 };
 
+// Show upfound.in live in an iframe. If upfound.in blocks embedding
+// (X-Frame-Options or CSP frame-ancestors), set this to false to fall
+// back to the drawn mock.
+export const embedUpfound = true;
+
 export const hero = {
   name: "Charan Tejas Parimi",
   lead: "Full stack AI engineer. I build web apps and the AI features inside them.",
