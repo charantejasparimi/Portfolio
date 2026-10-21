@@ -781,17 +781,18 @@ a:hover {
 /* Live Upfound preview */
 .live-box {
   position: relative;
+  display: block;
   overflow: hidden;
   background: #fff;
 }
 
-.live-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0;
-  transform-origin: 0 0;
-  pointer-events: none;
+.live-box img {
+  width: 100%;
+  transition: transform 0.5s var(--ease);
+}
+
+.live-box:hover img {
+  transform: scale(1.02);
 }
 
 .live-cover {
@@ -821,8 +822,8 @@ a:hover {
   text-decoration: none;
 }
 
-.live-cover:hover span,
-.live-cover:focus-visible span {
+.live-box:hover .live-cover span,
+.live-box:focus-visible .live-cover span {
   opacity: 1;
   transform: none;
 }
@@ -1054,7 +1055,12 @@ a:hover {
   }
 
   .button,
-  .socials a {
+  .socials a,
+  .live-box img {
     transition: none;
+  }
+
+  .live-box:hover img {
+    transform: none;
   }
 }

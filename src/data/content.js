@@ -12,9 +12,7 @@ export const links = {
   resume: null,
 };
 
-// Show upfound.in live in an iframe. If upfound.in blocks embedding
-// (X-Frame-Options or CSP frame-ancestors), set this to false to fall
-// back to the drawn mock.
+// Show the upfound.in screenshot on the Upfound tile (false = drawn mock).
 export const embedUpfound = true;
 
 export const hero = {
