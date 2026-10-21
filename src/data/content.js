@@ -21,6 +21,36 @@ export const hero = {
   facts: ["Chennai, India", "Around 2 years of experience", "15-day notice period"],
 };
 
+// Floating tool chips around the hero photo.
+export const heroChips = [
+  { label: "Python", color: "#f5b700" },
+  { label: "FastAPI", color: "#05998b" },
+  { label: "React", color: "#2997ff" },
+  { label: "LangChain", color: "#7c5cff" },
+  { label: "PostgreSQL", color: "#336791" },
+  { label: "Node.js", color: "#3c873a" },
+];
+
+// Scrolling strip of tools under the hero.
+export const marquee = [
+  "Python",
+  "FastAPI",
+  "React",
+  "TypeScript",
+  "Node.js",
+  "LangChain",
+  "RAG",
+  "OpenAI SDK",
+  "PostgreSQL",
+  "MongoDB",
+  "Redis",
+  "ChromaDB",
+  "Docker",
+  "AWS",
+  "RabbitMQ",
+  "GraphQL",
+];
+
 export const projects = {
   upfound: {
     meta: "Freelance, Nov 2025 to Mar 2026",

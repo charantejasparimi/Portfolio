@@ -1,5 +1,5 @@
 import Icon from "./Icon";
-import { hero, links } from "../data/content";
+import { hero, links, heroChips, marquee } from "../data/content";
 import photo360 from "../assets/profile-360.webp";
 import photo540 from "../assets/profile-540.webp";
 import photoJpg from "../assets/profile-540.jpg";
@@ -26,12 +26,32 @@ export const SocialLinks = ({ className = "socials" }) => (
 
 const Hero = () => (
   <section className="hero band band-paper" id="top" aria-labelledby="hero-title">
+    <div className="hero-grid-bg" aria-hidden="true" />
     <div className="container hero-grid">
-      <picture className="hero-photo" data-reveal>
-        <source type="image/webp" srcSet={`${photo360} 360w, ${photo540} 540w`} sizes="(max-width: 760px) 120px, 360px" />
-        <img src={photoJpg} width="540" height="540" alt="Charan smiling among green coffee plants." />
-      </picture>
+      <div className="hero-visual" data-reveal>
+        <svg className="orbit" viewBox="0 0 400 400" aria-hidden="true">
+          <circle cx="200" cy="200" r="190" />
+          <circle cx="200" cy="200" r="150" />
+        </svg>
+        <picture className="hero-photo">
+          <source type="image/webp" srcSet={`${photo360} 360w, ${photo540} 540w`} sizes="(max-width: 760px) 120px, 300px" />
+          <img src={photoJpg} width="540" height="540" alt="Charan Tejas Parimi, smiling." />
+        </picture>
+        <ul className="chips" aria-hidden="true">
+          {heroChips.map((c, i) => (
+            <li key={c.label} className={`chip chip-${i + 1}`} style={{ "--dot": c.color }}>
+              <span className="chip-dot" />
+              {c.label}
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <div className="hero-text" data-reveal>
+        <p className="status">
+          <span className="status-dot" aria-hidden="true" />
+          Open to full stack and AI roles
+        </p>
         <h1 id="hero-title" className="display">
           {hero.name}
         </h1>
@@ -53,6 +73,16 @@ const Hero = () => (
           <SocialLinks />
         </div>
       </div>
+    </div>
+
+    <div className="marquee" aria-label="Tools I use">
+      <ul className="marquee-track">
+        {[...marquee, ...marquee].map((m, i) => (
+          <li key={`${m}-${i}`} aria-hidden={i >= marquee.length ? "true" : undefined}>
+            {m}
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 );
