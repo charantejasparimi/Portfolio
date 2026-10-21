@@ -1,7 +1,5 @@
 import Icon from "./Icon";
 import { hero, links, heroChips, marquee } from "../data/content";
-import photo360 from "../assets/profile-360.webp";
-import photo540 from "../assets/profile-540.webp";
 import photoJpg from "../assets/profile-540.jpg";
 
 export const SocialLinks = ({ className = "socials" }) => (
@@ -33,10 +31,18 @@ const Hero = () => (
           <circle cx="200" cy="200" r="190" />
           <circle cx="200" cy="200" r="150" />
         </svg>
-        <picture className="hero-photo">
-          <source type="image/webp" srcSet={`${photo360} 360w, ${photo540} 540w`} sizes="(max-width: 760px) 120px, 300px" />
-          <img src={photoJpg} width="540" height="540" alt="Charan Tejas Parimi, smiling." />
-        </picture>
+        <div className="hero-photo">
+          <img
+            src={links.avatar}
+            width="460"
+            height="460"
+            alt="Charan Tejas Parimi, smiling, in front of misty green hills."
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = photoJpg;
+            }}
+          />
+        </div>
         <ul className="chips" aria-hidden="true">
           {heroChips.map((c, i) => (
             <li key={c.label} className={`chip chip-${i + 1}`} style={{ "--dot": c.color }}>

@@ -8,6 +8,8 @@ export const links = {
   orcid: "https://orcid.org/0009-0006-5395-407X",
   upfound: "https://upfound.in",
   plant: "https://github.com/charantejasparimi/Plant_Disease_Detection",
+  // Profile photo, served by GitHub so it follows the GitHub avatar.
+  avatar: "https://avatars.githubusercontent.com/u/120124124?v=4&s=460",
   // Set to "/resume.pdf" once a current PDF (without phone number) is in public/.
   resume: null,
 };
