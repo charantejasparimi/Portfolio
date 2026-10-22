@@ -1,7 +1,8 @@
 import Icon from "./Icon";
 import Mascot from "./Mascot";
 import { hero, links, heroChips, marquee } from "../data/content";
-import photoJpg from "../assets/profile-540.jpg";
+import photoJpg from "../assets/profile.jpg";
+import photoWebp from "../assets/profile.webp";
 
 export const SocialLinks = ({ className = "socials" }) => (
   <ul className={className}>
@@ -32,18 +33,16 @@ const Hero = () => (
           <circle cx="200" cy="200" r="190" />
           <circle cx="200" cy="200" r="150" />
         </svg>
-        <div className="hero-photo">
+        <picture className="hero-photo">
+          <source type="image/webp" srcSet={photoWebp} />
           <img
-            src={links.avatar}
+            src={photoJpg}
             width="460"
             height="460"
+            fetchpriority="high"
             alt="Charan Tejas Parimi, smiling, in front of misty green hills."
-            onError={(e) => {
-              e.currentTarget.onerror = null;
-              e.currentTarget.src = photoJpg;
-            }}
           />
-        </div>
+        </picture>
         <Mascot />
         <ul className="chips has-mascot" aria-hidden="true">
           {heroChips.map((c, i) => (

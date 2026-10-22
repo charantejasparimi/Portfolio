@@ -348,6 +348,7 @@ a:hover {
 
 .hero-photo {
   position: relative;
+  display: block;
   width: 64%;
 }
 
