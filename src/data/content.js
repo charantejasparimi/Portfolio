@@ -24,6 +24,17 @@ export const hero = {
 };
 
 // Floating tool chips around the hero photo.
+// Mascot that follows you down the page. One scene per section.
+// "clip" names a file in src/assets/mascot/ (all use the waving clip until
+// the matching action clips exist); "prop" is a small item it shows.
+export const mascotScenes = [
+  { id: "work", clip: "wave", prop: "\u{1F4BB}", say: "Here's what I've built" },
+  { id: "experience", clip: "wave", prop: "\u{1F4D6}", say: "Reading up on my work history" },
+  { id: "skills", clip: "wave", prop: "\u{1F9F0}", say: "My toolbox" },
+  { id: "background", clip: "wave", prop: "\u{1F393}", say: "Where I studied" },
+  { id: "contact", clip: "wave", prop: "\u{2709}\u{FE0F}", say: "Say hi! I reply fast" },
+];
+
 export const heroChips = [
   { label: "Python", color: "#f5b700" },
   { label: "FastAPI", color: "#05998b" },

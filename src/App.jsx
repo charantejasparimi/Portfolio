@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Work from "./components/Work";
 import { Experience, Skills, Background, Contact } from "./components/Sections";
 import useReveal from "./hooks/useReveal";
+import MascotGuide from "./components/MascotGuide";
 
 const App = () => {
   useReveal();
@@ -20,6 +21,7 @@ const App = () => {
         <Background />
         <Contact />
       </main>
+      <MascotGuide />
     </>
   );
 };

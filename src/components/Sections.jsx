@@ -57,7 +57,7 @@ export const Skills = () => (
 );
 
 export const Background = () => (
-  <section className="band band-paper" aria-labelledby="bg-title">
+  <section className="band band-paper" id="background" aria-labelledby="bg-title">
     <div className="container">
       <h2 id="bg-title" className="h2" data-reveal>
         Background.

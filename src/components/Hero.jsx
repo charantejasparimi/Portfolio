@@ -1,4 +1,5 @@
 import Icon from "./Icon";
+import Mascot from "./Mascot";
 import { hero, links, heroChips, marquee } from "../data/content";
 import photoJpg from "../assets/profile-540.jpg";
 
@@ -43,7 +44,8 @@ const Hero = () => (
             }}
           />
         </div>
-        <ul className="chips" aria-hidden="true">
+        <Mascot />
+        <ul className="chips has-mascot" aria-hidden="true">
           {heroChips.map((c, i) => (
             <li key={c.label} className={`chip chip-${i + 1}`} style={{ "--dot": c.color }}>
               <span className="chip-dot" />

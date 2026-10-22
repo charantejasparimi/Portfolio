@@ -1257,3 +1257,222 @@ a:hover {
     transform: none;
   }
 }
+
+/* Waving mascot beside the hero photo */
+.mascot {
+  position: absolute;
+  left: -12%;
+  bottom: -6%;
+  width: 40%;
+  z-index: 2;
+}
+
+.mascot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.14));
+}
+
+.mascot-bubble {
+  position: absolute;
+  left: 62%;
+  top: -2%;
+  padding: 8px 14px;
+  border-radius: 16px 16px 16px 4px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.4);
+  animation: mascot-pop 0.5s var(--ease) 0.9s both;
+}
+
+.mascot-bubble .wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: mascot-wave 1.8s ease-in-out 1.2s 2;
+}
+
+@keyframes mascot-pop {
+  from { opacity: 0; transform: translateY(10px) scale(0.95); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes mascot-wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+}
+
+.chips.has-mascot .chip-5 {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .mascot {
+    left: -8%;
+    width: 38%;
+  }
+
+  .mascot-bubble {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-bubble,
+  .mascot-bubble .wave {
+    animation: none;
+  }
+}
+
+/* Mascot guide that follows the scroll */
+.guide {
+  position: fixed;
+  right: 18px;
+  bottom: 14px;
+  z-index: 44;
+  width: 132px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(40px) scale(0.85);
+  transition: opacity 0.35s var(--ease), transform 0.45s var(--ease);
+}
+
+.guide.is-on {
+  opacity: 1;
+  transform: none;
+}
+
+.guide.is-on.lean-down {
+  transform: translateY(8px) rotate(-6deg);
+}
+
+.guide.is-on.lean-up {
+  transform: translateY(-10px) rotate(4deg);
+}
+
+.guide-body {
+  position: relative;
+}
+
+.guide-body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.18));
+}
+
+.guide-prop {
+  position: absolute;
+  right: -4px;
+  bottom: 14px;
+  font-size: 38px;
+  line-height: 1;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2));
+  animation: prop-in 0.5s var(--ease) both, prop-bob 2.6s ease-in-out 0.5s infinite;
+}
+
+.guide-say {
+  position: absolute;
+  right: 70%;
+  bottom: 78%;
+  width: max-content;
+  max-width: 220px;
+  padding: 9px 14px;
+  border-radius: 16px 16px 4px 16px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.4);
+  animation: say-in 0.4s var(--ease) both;
+}
+
+.guide-close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink-2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.guide.is-on:hover .guide-close,
+.guide-close:focus-visible {
+  opacity: 1;
+}
+
+.guide.is-on .guide-body {
+  pointer-events: auto;
+}
+
+@keyframes prop-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.6) rotate(-20deg); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes prop-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-6deg); }
+}
+
+@keyframes say-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.95); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (hover: none) {
+  .guide.is-on .guide-close {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .guide {
+    width: 92px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .guide-prop {
+    font-size: 28px;
+  }
+
+  .guide-say {
+    max-width: 160px;
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide,
+  .guide.is-on.lean-down,
+  .guide.is-on.lean-up {
+    transition: opacity 0.2s;
+    transform: none;
+  }
+
+  .guide-prop,
+  .guide-say {
+    animation: none;
+  }
+}
